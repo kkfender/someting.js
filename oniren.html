@@ -7,6 +7,7 @@
     </head>
     <body>
         <h1 id="subject">あかさたな</h1>
+        <h2 id="answer">&nbsp;</h2>
         <form  name="typing">
             <input id="inputForm" name="input" type="text">
             <input name="btn" type="submit" value="送信">
@@ -29,7 +30,7 @@
                 result[i] = str.charAt(i);
             }
             $('#inputForm').keyup(function(e) {
-                console.log($(this).val())
+                $('#answer').text($(this).val());
             });
         </script>
 
