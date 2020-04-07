@@ -1,3 +1,37 @@
-<script type="text/javascript">
-    test
-</script>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    </head>
+    <body>
+        <h1 id="subject">あかさたな</h1>
+        <form  name="typing">
+            <input id="inputForm" name="input" type="text">
+            <input name="btn" type="submit" value="送信">
+        </form>
+
+        <script type="text/javascript">
+            const textList = [
+                'Hello World',
+                'Good',
+                'I love JavaScript',
+                'This is MyApp',
+                'Welcome'
+            ];
+            const rnd = Math.floor(Math.random() * textList.length);
+            $('#subject').textContent = textList[rnd];
+
+            var str = $('#subject').text();
+            var result = [];
+            for(var i = 0 ; i < str.length ;  i++){
+                result[i] = str.charAt(i);
+            }
+            $('#inputForm').keyup(function(e) {
+                console.log($(this).val())
+            });
+        </script>
+
+    </body>
+</html>
